@@ -3,9 +3,9 @@ chcp 65001 > nul
 :MENU
 cls
 echo ==============================================================================
-echo   CONG CU HO TRO CHUP 11 ANH MINH CHUNG (A01 - A11)
+echo   CONG CU HO TRO CHUP 11 ANH MINH CHUNG (A01 - A11) - PYTHON 3
 echo   De tai DT018: Radix Sort cho mang co so am va so duong
-echo   Sinh vien: Nguyen Khoa Dien - MSSV: N24DCDT014
+echo   Sinh vien: Nguyen Khoa Dien - MSSV: N24DCDT014 - Lop: D24CQDT01-N
 echo ==============================================================================
 echo.
 echo   [1] A01 (Hinh 4.1): Vi du 1 tren phieu [-5, 2, -10, 0, 2]
@@ -16,7 +16,7 @@ echo   [5] A05 (Hinh 4.5): Ca bien 1 (toan so 0)
 echo   [6] A06 (Hinh 4.6): Ca bien 2 (khoa trung lap am va duong)
 echo   [7] A07 (Hinh 4.7): Ca bien 3 (mang rong va mang 1 phan tu)
 echo   [8] A08 (Hinh 4.8): Kiem tra input sai (Validator LOI01)
-echo   [9] A09 (Hinh 4.9): Chay tong ket toan bo bo kiem thu (runtests.jl)
+echo   [9] A09 (Hinh 4.9): Chay tong ket toan bo 14 ca kiem thu
 echo   [10] A10 (Hinh 4.10): Lenh va huong dan clone sach kiem tra lai
 echo   [11] A11 (Hinh 4.11): Huong dan chup giao dien web GitHub
 echo   [0] Chay lien tuc toan bo tu A01 den A08
@@ -41,7 +41,7 @@ goto MENU
 
 :CHAY_A01
 cls
-julia scripts\chup_11_anh.jl A01
+python scripts\chup_11_anh.py A01
 echo -> Nhan Win + Shift + S de chup man hinh va luu thanh docs\anh_ket_qua\01_vi_du_1.png
 echo.
 pause
@@ -49,7 +49,7 @@ goto MENU
 
 :CHAY_A02
 cls
-julia scripts\chup_11_anh.jl A02
+python scripts\chup_11_anh.py A02
 echo -> Nhan Win + Shift + S de chup man hinh va luu thanh docs\anh_ket_qua\02_vi_du_2.png
 echo.
 pause
@@ -57,7 +57,7 @@ goto MENU
 
 :CHAY_A03
 cls
-julia scripts\chup_11_anh.jl A03
+python scripts\chup_11_anh.py A03
 echo -> Nhan Win + Shift + S de chup man hinh va luu thanh docs\anh_ket_qua\03_tu_thiet_ke_1.png
 echo.
 pause
@@ -65,7 +65,7 @@ goto MENU
 
 :CHAY_A04
 cls
-julia scripts\chup_11_anh.jl A04
+python scripts\chup_11_anh.py A04
 echo -> Nhan Win + Shift + S de chup man hinh va luu thanh docs\anh_ket_qua\04_tu_thiet_ke_2.png
 echo.
 pause
@@ -73,7 +73,7 @@ goto MENU
 
 :CHAY_A05
 cls
-julia scripts\chup_11_anh.jl A05
+python scripts\chup_11_anh.py A05
 echo -> Nhan Win + Shift + S de chup man hinh va luu thanh docs\anh_ket_qua\05_bien_1.png
 echo.
 pause
@@ -81,7 +81,7 @@ goto MENU
 
 :CHAY_A06
 cls
-julia scripts\chup_11_anh.jl A06
+python scripts\chup_11_anh.py A06
 echo -> Nhan Win + Shift + S de chup man hinh va luu thanh docs\anh_ket_qua\06_bien_2.png
 echo.
 pause
@@ -89,7 +89,7 @@ goto MENU
 
 :CHAY_A07
 cls
-julia scripts\chup_11_anh.jl A07
+python scripts\chup_11_anh.py A07
 echo -> Nhan Win + Shift + S de chup man hinh va luu thanh docs\anh_ket_qua\07_bien_3.png
 echo.
 pause
@@ -97,7 +97,7 @@ goto MENU
 
 :CHAY_A08
 cls
-julia scripts\chup_11_anh.jl A08
+python scripts\chup_11_anh.py A08
 echo -> Nhan Win + Shift + S de chup man hinh va luu thanh docs\anh_ket_qua\08_input_khong_hop_le.png
 echo.
 pause
@@ -106,9 +106,9 @@ goto MENU
 :CHAY_A09
 cls
 echo ==============================================================================
-echo   [A09] - HINH 4.9: TONG KET BO KIEM THU TU DONG 14 CA TEST
+echo   [A09] - HINH 4.9: TONG KET BO KIEM THU TU DONG 14 CA TEST (PYTHON 3)
 echo ==============================================================================
-julia test\runtests.jl
+python test\runtests.py
 echo.
 echo -> Nhan Win + Shift + S de chup man hinh va luu thanh docs\anh_ket_qua\09_tong_ket_kiem_thu.png
 echo.
@@ -125,8 +125,8 @@ echo.
 echo   git clone https://github.com/TEN_GITHUB_CUA_BAN/N24DCDT014_DT018_RadixSort.git kiem_tra_clone
 echo   cd kiem_tra_clone
 echo   git rev-parse HEAD
-echo   julia demo.jl
-echo   julia test\runtests.jl
+echo   python demo.py
+echo   python test\runtests.py
 echo.
 echo -> Chup man hinh cua so chay cac lenh tren luu thanh docs\anh_ket_qua\10_clone_sach_chay_lai.png
 echo.
@@ -144,8 +144,7 @@ echo.
 echo Kiem tra giao dien tren web hien thi ro:
 echo - Ten tai khoan cua ban
 echo - Ten repo: N24DCDT014_DT018_RadixSort
-echo - Commit C: cdd734f (hoac commit moi nhat)
-echo - Cac thu muc src, test, demo.jl, README.md
+echo - Cac thu muc src, test, demo.py, README.md
 echo.
 echo -> Nhan Win + Shift + S chup man hinh trinh duyet luu thanh docs\anh_ket_qua\11_github_repo_commit.png
 echo.
@@ -154,7 +153,7 @@ goto MENU
 
 :CHAY_ALL
 cls
-julia scripts\chup_11_anh.jl ALL
+python scripts\chup_11_anh.py ALL
 echo.
 pause
 goto MENU
