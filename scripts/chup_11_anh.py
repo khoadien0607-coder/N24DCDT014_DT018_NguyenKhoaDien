@@ -101,14 +101,51 @@ def chay_a08():
     print("=" * 75)
     print()
 
+def chay_a09():
+    in_tieu_de("A09", "4.9", "TỔNG KẾT BỘ KIỂM THỬ TỰ ĐỘNG 14 CA TEST", "Chạy toàn bộ 14 ca test bao phủ biên, khóa lặp và lỗi")
+    sys.stdout.flush()
+    test_file = os.path.join(os.path.dirname(__file__), "..", "test", "runtests.py")
+    os.system(f'python "{test_file}"')
+
+def chay_a10():
+    in_tieu_de("A10", "4.10", "CLONE VÀ CHẠY LẠI TỪ BẢN SẠCH", "Chứng minh mã nguồn clone từ GitHub chạy độc lập thành công")
+    print("  [HƯỚNG DẪN CHỤP ẢNH A10]:")
+    print("  1. Mở PowerShell hoặc Command Prompt tại một thư mục trống (ví dụ: D:\\KiemTraClone).")
+    print("  2. Chạy lệnh clone repository từ GitHub của bạn:")
+    print("     git clone https://github.com/<USERNAME>/N24DCDT014_DT018_RadixSort.git")
+    print("  3. Di chuyển vào thư mục vừa clone và kiểm tra commit:")
+    print("     cd N24DCDT014_DT018_RadixSort")
+    print("     git rev-parse HEAD")
+    print("  4. Chạy lại chương trình demo:")
+    print("     python demo.py")
+    print("  5. Chụp màn hình terminal hiển thị các lệnh trên và lưu vào docs\\anh_ket_qua\\10_clone_chay_lai.png")
+    print("=" * 75)
+    print()
+
+def chay_a11():
+    in_tieu_de("A11", "4.11", "GIAO DIỆN KHO LƯU TRỮ GITHUB CÁ NHÂN", "Minh chứng kho mã nguồn thật và mã commit trên GitHub")
+    print("  [HƯỚNG DẪN CHỤP ẢNH A11]:")
+    print("  1. Mở trình duyệt web (Chrome, Edge,...).")
+    print("  2. Truy cập vào trang GitHub repository của bạn:")
+    print("     https://github.com/<USERNAME>/N24DCDT014_DT018_RadixSort")
+    print("  3. Đảm bảo màn hình hiển thị rõ:")
+    print("     - Tên tài khoản GitHub của bạn (ở góc trên).")
+    print("     - Tên repository và danh sách thư mục: src/, test/, docs/, demo.py,...")
+    print("     - Mã commit SHA và số lượng commit gần nhất.")
+    print("  4. Nhấn Win + Shift + S chụp toàn bộ cửa sổ trình duyệt và lưu vào docs\\anh_ket_qua\\11_repo_github.png")
+    print("=" * 75)
+    print()
+
 if __name__ == "__main__":
     chon = sys.argv[1].upper() if len(sys.argv) > 1 else "ALL"
     dispatch = {
         "A01": chay_a01, "A02": chay_a02, "A03": chay_a03, "A04": chay_a04,
-        "A05": chay_a05, "A06": chay_a06, "A07": chay_a07, "A08": chay_a08
+        "A05": chay_a05, "A06": chay_a06, "A07": chay_a07, "A08": chay_a08,
+        "A09": chay_a09, "A10": chay_a10, "A11": chay_a11
     }
     if chon in dispatch:
         dispatch[chon]()
     else:
         for f in dispatch.values():
             f()
+

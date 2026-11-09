@@ -12,6 +12,8 @@ import os
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from de_tai import radix_co_am

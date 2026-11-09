@@ -127,3 +127,4 @@ def radix_co_am(a: List[int], in_trung_gian: bool = False) -> List[int]:
 def giai_bai(du_lieu: List[int], in_trung_gian: bool = False) -> List[int]:
     """Hàm điểm vào (entry point) chuẩn theo khung đồ án môn học."""
     return radix_co_am(du_lieu, in_trung_gian=in_trung_gian)
+
